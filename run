@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+
+run() {
+  "npm" "run" "$1" "--" "--config-file" "apps/$2/nuxt.config.js" "-p" "3300"
+}
+
+copy() {
+  "./copy.bat" "html_mydev\\$1"
+}
+
+copy_app() {
+  "./copy.bat" "html_mydev\\apps\\$1"
+}
+
+docker() {
+  "docker" "compose" "up" "-d"
+}
+
+case $1 in
+  "down")
+    #  "docker" "compose" "down"
+    echo "abc abc"
+    #  docker compose down
+  ;;
+  "dev")
+    run dev "$2"
+    exit
+  ;;
+  "build")
+    run build $2
+    exit
+  ;;
+  "start")
+    run start $2
+    exit
+  ;;
+  "generate")
+    run generate $2
+    exit
+  ;;
+  "export")
+    run "export" $2
+    exit
+  ;;
+  "serve")
+     run serve $2
+     exit
+  ;;
+  "copy")
+    copy $2
+    exit
+  ;;
+  "copy_app")
+    copy_app $2
+    exit
+  ;;
+  "publish")
+    run "generate" $2
+    copy "$2"
+    exit
+  ;;
+  "publish_app")
+    run "generate" "$2"
+    copy_app "$2"
+    exit
+  ;;
+  "up")
+    docker $1
+    exit
+  ;;
+  *)
+    run dev $1
+  ;;
+esac
