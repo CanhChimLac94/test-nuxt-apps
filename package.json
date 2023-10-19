@@ -4,9 +4,9 @@
   "private": true,
   "global": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
+    "dev": "nuxt --config-file apps/live-chat/nuxt.config.js",
+    "build": "nuxt build ",
+    "start": "nuxt start --config-file apps/live-chat/nuxt.config.js",
     "generate": "nuxt generate",
     "export": "nuxt export",
     "serve": "nuxt serve",
