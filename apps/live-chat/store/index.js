@@ -17,28 +17,23 @@ export const state = () => ({
           // },
 
           {
-            url: "stun:stun.relay.metered.ca:80",
+            "urls": "stun:global.stun.twilio.com:3478"
           },
           {
-            url: "turn:a.relay.metered.ca:80",
-            username: "8fe14f63420cfd1ca7d4d3ed",
-            credential: "Nb3s8nM9ceDes0sr",
+            "username": "dc2d2894d5a9023620c467b0e71cfa6a35457e6679785ed6ae9856fe5bdfa269",
+            "credential": "tE2DajzSJwnsSbc123",
+            "urls": "turn:global.turn.twilio.com:3478?transport=udp"
           },
           {
-            url: "turn:a.relay.metered.ca:80?transport=tcp",
-            username: "8fe14f63420cfd1ca7d4d3ed",
-            credential: "Nb3s8nM9ceDes0sr",
+            "username": "dc2d2894d5a9023620c467b0e71cfa6a35457e6679785ed6ae9856fe5bdfa269",
+            "credential": "tE2DajzSJwnsSbc123",
+            "urls": "turn:global.turn.twilio.com:3478?transport=tcp"
           },
           {
-            url: "turn:a.relay.metered.ca:443",
-            username: "8fe14f63420cfd1ca7d4d3ed",
-            credential: "Nb3s8nM9ceDes0sr",
-          },
-          {
-            url: "turn:a.relay.metered.ca:443?transport=tcp",
-            username: "8fe14f63420cfd1ca7d4d3ed",
-            credential: "Nb3s8nM9ceDes0sr",
-          },
+            "username": "dc2d2894d5a9023620c467b0e71cfa6a35457e6679785ed6ae9856fe5bdfa269",
+            "credential": "tE2DajzSJwnsSbc123",
+            "urls": "turn:global.turn.twilio.com:443?transport=tcp"
+          }
         ]
     },
     chats: [],
